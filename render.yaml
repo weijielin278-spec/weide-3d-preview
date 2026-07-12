@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: weide-3d-preview
+    env: docker
+    plan: free
+    autoDeploy: false
+    envVars:
+      - key: PORT
+        value: 8080
+      - key: HOST
+        value: 0.0.0.0
+      - key: CACHE_DIR
+        value: /tmp/model-cache
+      - key: FACTORY_ACCOUNT_DIR
+        value: /tmp/factory-accounts
+      - key: EXPORT_DIR
+        value: /tmp/exports
+      - key: MESHY_API_KEY
+        sync: false
+      - key: MESHY_API_KEY_BACKUP
+        sync: false
+      - key: FACTORY_ADMIN_CODE
+        sync: false

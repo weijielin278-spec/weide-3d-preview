@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>工厂内测后台</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="admin-shell">
+      <header class="brand">
+        <span>Factory Admin</span>
+        <h1>工厂内测后台</h1>
+        <div class="version-badge">系统 V1 内测版</div>
+        <p>用于查看工厂账号、邀请码、积分余额和生成记录。微信收款后，在这里手动给用户加积分。</p>
+      </header>
+
+      <section class="panel">
+        <h2>管理员口令</h2>
+        <div class="admin-form">
+          <input id="adminCode" type="password" placeholder="管理员口令" />
+          <button id="loadAdminBtn" class="primary" type="button">进入后台</button>
+        </div>
+        <p id="adminStatus" class="hint">默认本机口令：KIKI-ADMIN-2026。正式上线前建议改成你自己的。</p>
+      </section>
+
+      <section class="panel">
+        <h2>手动加积分</h2>
+        <div class="admin-form three">
+          <input id="creditEmail" type="email" placeholder="用户邮箱" />
+          <input id="creditAmount" type="number" step="20" value="100" />
+          <input id="creditNote" type="text" placeholder="备注，例如微信收款 25 元" />
+          <button id="addCreditsBtn" class="primary" type="button">加积分</button>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>新建邀请码</h2>
+        <div class="admin-form">
+          <input id="newInviteCode" type="text" placeholder="留空则自动生成" />
+          <button id="createInviteBtn" type="button">生成邀请码</button>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>用户列表</h2>
+        <div id="userTable" class="admin-table"></div>
+      </section>
+
+      <section class="panel">
+        <h2>邀请码</h2>
+        <div id="inviteTable" class="admin-table"></div>
+      </section>
+
+      <section class="panel">
+        <h2>最近记录</h2>
+        <div id="recordTable" class="admin-table"></div>
+      </section>
+    </main>
+
+    <script src="./admin.js"></script>
+  </body>
+</html>

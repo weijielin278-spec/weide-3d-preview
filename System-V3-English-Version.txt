@@ -1,0 +1,43 @@
+System V3 English Client Preview
+
+Positioning:
+North America client-facing 2D artwork to 3D preview tool for custom Christmas glass ornaments.
+
+Current V3 baseline:
+1. Full English client UI.
+2. Upload 2D artwork and generate a 3D preview.
+3. Uses the existing account, invite, credits, backend, Meshy proxy, and local cache logic.
+4. Cached results do not consume credits.
+5. Grid-based 3D preview area.
+6. Rotation behavior follows the V1 factory preview: OrbitControls for view rotation, zoom, and pan.
+7. Default glass preview.
+8. Color preview uses the model texture when available, or the uploaded artwork as fallback texture.
+9. Contact panel is hidden behind a Contact Us button.
+10. Contact methods include Email, WhatsApp, and WeChat.
+11. Download STL button exports the loaded 3D model as an STL file through the browser download flow.
+12. Local-only demoModel test parameter can load a cached GLB on 127.0.0.1 or localhost for verification without consuming Meshy credits.
+13. English V3 registration page is active.
+14. Registration requires email and invite code.
+15. New accounts receive 100 free credits.
+16. The registration page explains that users without an invite code can contact via Email or WhatsApp.
+17. Invite-code contact links use an official-style row layout with a right-side round arrow icon.
+
+Verified V3 baseline:
+- client-preview.html shows Client Preview V3.
+- client-preview.js is loaded with client-preview-v13.
+- Cached GLB loading was tested with /api/cached-model/7c7ee66663863ce9b2cc7aaa8c394f9fcc04db6766150552e0f69132e72d78be.glb.
+- Download STL was tested successfully.
+- Test result: STL downloaded: custom-ornament-1783781549367.stl.
+- login.html shows the English Client Preview V3 registration page.
+- login.html is loaded with styles.css?v=client-login-v4.
+- Registration defaults to Create Account mode and shows the invite code field.
+- The registration rule panel includes Email and WhatsApp contact links for invite-code requests.
+
+Local URL:
+http://127.0.0.1:5173/client-preview.html
+
+Registration URL:
+http://127.0.0.1:5173/login.html?next=client-preview.html
+
+Note:
+This is the current English V3 version intended for North America customer review. The working baseline includes STL export.

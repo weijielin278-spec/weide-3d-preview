@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Christmas Glass Ornament 3D Preview V3</title>
+    <link rel="stylesheet" href="./styles.css?v=client-preview-v6" />
+  </head>
+  <body class="client-page christmas-client">
+    <main class="client-shell">
+      <section class="client-side">
+        <header class="brand client-brand">
+          <span>Christmas Ornament Studio</span>
+          <h1>AI 3D Preview for Custom Glass Ornaments</h1>
+          <div class="version-badge">Client Preview V3</div>
+          <p>Upload a 2D artwork file and generate a rotatable 3D preview before confirming your custom ornament order.</p>
+        </header>
+
+        <div class="client-account">
+          <strong id="clientEmail">Checking account...</strong>
+          <span id="clientCredits">-- credits</span>
+        </div>
+
+        <section class="client-card">
+          <h2>1. Upload Artwork</h2>
+          <label class="client-upload">
+            <input id="clientFile" type="file" accept="image/png,image/jpeg,image/webp" />
+            <span>Choose 2D Image</span>
+            <small id="clientFileName">PNG, JPG, or WEBP. A clear front-view artwork is recommended.</small>
+            <img id="clientImagePreview" alt="Uploaded artwork preview" hidden />
+          </label>
+        </section>
+
+        <section class="client-card">
+          <h2>2. Generate 3D Preview</h2>
+          <button id="clientGenerateBtn" class="client-main-btn" type="button">Generate 3D Preview</button>
+          <p id="clientStatus" class="hint">Upload an image first, then generate your preview.</p>
+        </section>
+
+        <section class="client-card contact-card">
+          <h2>3. Confirm Custom Order</h2>
+          <p class="hint">After the 3D preview is ready, contact us to confirm size, craft details, and pricing.</p>
+          <button id="clientContactToggle" class="client-contact-toggle" type="button">Contact Us</button>
+          <div id="clientContactList" class="client-contact-list" hidden>
+            <a class="client-contact-link" href="mailto:weijielin278@gmail.com">
+              <span class="contact-icon">@</span>
+              <span><strong>Email</strong><small>weijielin278@gmail.com</small></span>
+            </a>
+            <a class="client-contact-link" href="https://wa.me/8619953124703" target="_blank" rel="noreferrer">
+              <span class="contact-icon">WA</span>
+              <span><strong>WhatsApp</strong><small>+86 199 5312 4703</small></span>
+            </a>
+            <span class="client-contact-link">
+              <span class="contact-icon">WX</span>
+              <span><strong>WeChat</strong><small>Ethen1999212</small></span>
+            </span>
+          </div>
+        </section>
+      </section>
+
+      <section class="client-viewer-panel" aria-label="3D model preview">
+        <div class="client-toolbar">
+          <div>
+            <strong id="clientModelTitle">Waiting for 3D Preview</strong>
+            <span id="clientModelMeta">Upload an image to get started</span>
+          </div>
+          <div class="client-tool-actions">
+            <div class="client-view-actions">
+              <button class="client-view active" type="button" data-view="front">Front</button>
+              <button class="client-view" type="button" data-view="left">Side</button>
+              <button class="client-view" type="button" data-view="top">Top</button>
+              <button class="client-view" type="button" data-view="auto">Auto Spin</button>
+            </div>
+            <div class="client-material-actions">
+              <button class="client-material active" type="button" data-material="glass">Glass Preview</button>
+              <button class="client-material" type="button" data-material="color">Color Preview</button>
+              <button id="clientStlBtn" class="client-material" type="button">Download STL</button>
+            </div>
+          </div>
+        </div>
+        <div class="client-canvas-wrap">
+          <canvas id="clientViewer"></canvas>
+          <div id="clientViewerEmpty" class="client-empty-state">
+            <strong>3D Preview Area</strong>
+            <span>Your generated model will appear here after you upload artwork and start the preview.</span>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="./client-preview.js?v=client-preview-v13"></script>
+  </body>
+</html>
