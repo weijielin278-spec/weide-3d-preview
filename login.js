@@ -14,7 +14,7 @@ function setMode(nextMode) {
   $("#submitAccountBtn").textContent = mode === "register" ? "Create Account and Continue" : "Sign In and Continue";
   setStatus(
     mode === "register"
-      ? "New accounts receive 100 free credits. If you do not have an invite code, please contact us."
+      ? "New accounts receive 50 free credits. If you do not have an invite code, please contact us."
       : "Enter your registered email to continue.",
   );
 }
